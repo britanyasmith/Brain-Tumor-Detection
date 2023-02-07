@@ -4,6 +4,7 @@
 </p>
 
 ##MOTIVATION
+
 A brain tumor is one of the most hostile diseases affecting
 over 700,000 people within the United States alone. Once
 formed, it has the ability to infiltrate the remaining portions of
@@ -20,6 +21,7 @@ classification. We want to implement a model with the ability
 to detect and identify the presence of a brain tumor.
 
 ##DATA SET DESCRIPTION
+
 We have decided to use a data set that is publicly available.
 The Brain Tumor Dataset, found on Kagle, consists of 3,
 565 raw MRI images with brain tumors in varying locations of
@@ -28,6 +30,7 @@ Glioma, Meningioma, No Tumor, and pituitary. This dataset is
 divided into training and testing sets.
 
 ##METHODOLOGY
+
 The initiation for this problem is at the image classification
 stage where we have to identify tumor types from MRI
 images. We will be using a basic Convolutional Neural
