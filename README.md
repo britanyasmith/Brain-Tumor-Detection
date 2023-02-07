@@ -1,37 +1,36 @@
 # Brain Tumor Detection
 <p align="center">
-  <img src=https://drive.google.com/file/d/1FQk_zg8-uVIullTbE0eWTOpP4pTu2cIJ/view?usp=sharing />
+  <img src=https://youtu.be/Wgy91IoWjjM />
 </p>
 
-## This branch contains UGVLidar instructions for performing autonomous navigation and obstacle avoidance using the Husky Robot for sp22Robot. This includes the instructions for performing all these tasks within Ubuntu and ROS as well as the code to manually move the robot a certain x, y, and theta distance. 
-## Hardware Requirements for Navigation and Obstacle Avoidance: 
-- 2D RPLidar
-- Nvidia Jetson Nano
-- Husky Clearpath Robot https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/
-## Software Requirements for perception
-- RViz
-- ROS Melodic [Run this command line: sudo apt install ros-melodic-Husky]
-- Ubuntu Bionic 18.04
+##MOTIVATION
+A brain tumor is one of the most hostile diseases affecting
+over 700,000 people within the United States alone. Once
+formed, it has the ability to infiltrate the remaining portions of
+the brain and spinal cord, resulting in death among adults and
+children. Caution and care are taken in the accuracy of the
+diagnosis, treatment, and planning to increase the life
+expectancy of that patient. Due to such caution being
+instrumental in the patient’s life, radiologists and clinical
+experts are tasked with the tedious task of ensuring not only
+detecting the tumor but also segmentation. To reduce the
+introduction of human error when evaluating these MRI scans,
+Machine Learning (ML) can be implemented for automatic
+classification. We want to implement a model with the ability
+to detect and identify the presence of a brain tumor.
 
-## Approach
-### 
-Our focus is to generate a map of the space, perform navigation and obstacle avoidance to estimated location, and finally communicate with the ARM team via MQTT to move robot to the target location.
+##DATA SET DESCRIPTION
+We have decided to use a data set that is publicly available.
+The Brain Tumor Dataset, found on Kagle, consists of 3,
+565 raw MRI images with brain tumors in varying locations of
+the brain [1]. The images are segmented into tumor types:
+Glioma, Meningioma, No Tumor, and pituitary. This dataset is
+divided into training and testing sets.
 
-<p align="center">
-  <img src="/pipeline.png" />
-</p>
-<p align="center">
-  <img width="500" height="400" src="/path.png" />
-</p>
+##METHODOLOGY
+The initiation for this problem is at the image classification
+stage where we have to identify tumor types from MRI
+images. We will be using a basic Convolutional Neural
+Network (CNN) as our baseline model and the proposed
+model will be a variant of this.
 
-## STEPS TO CREATING A MAP OF THE SPACE 
-
-### Step 1: When rplidar_ros.launch file does not exist nor the name of it is not rplidar_ros
-1. ls -l /dev/ttyUSB0
-2. sudo chmod 666 /dev/ttyUSB0
-3. cd /home/doyun/catkin_ws
-4. catkin_make rplidarNode
-5. source ~/catkin_ws/devel/setup.bash
-6. roslaunch rplidar_ros rplidar.launch
-7. Lidar should be spinning
-8. Leave this terminal open
