@@ -1,6 +1,6 @@
 # Brain Tumor Detection
 <p align="center">
-  <img src=https://media.giphy.com/media/fIqglx81Ch5N0L8BqU/giphy-downsized-large.gif />
+  <img src=https://drive.google.com/file/d/1FQk_zg8-uVIullTbE0eWTOpP4pTu2cIJ/view?usp=sharing />
 </p>
 
 ## This branch contains UGVLidar instructions for performing autonomous navigation and obstacle avoidance using the Husky Robot for sp22Robot. This includes the instructions for performing all these tasks within Ubuntu and ROS as well as the code to manually move the robot a certain x, y, and theta distance. 
