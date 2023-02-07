@@ -1,4 +1,4 @@
-# UGV LiDAR Team
+# Brain Tumor Detection
 <p align="center">
   <img src=https://media.giphy.com/media/fIqglx81Ch5N0L8BqU/giphy-downsized-large.gif />
 </p>
